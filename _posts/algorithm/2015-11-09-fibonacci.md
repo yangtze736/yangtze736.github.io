@@ -2,7 +2,7 @@
 layout: post
 title: 菲波那契数列实现
 category: 算法
-tags: 算法
+tags: [算法]
 keywords: 
 description: 
 ---
