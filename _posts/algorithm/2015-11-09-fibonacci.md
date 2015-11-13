@@ -1,5 +1,6 @@
 ---
 layout: post
+author: yangtze736
 title: 菲波那契数列实现
 category: 算法
 tags: 算法

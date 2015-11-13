@@ -1,5 +1,6 @@
 ---
 layout: post
+author: yangtze736
 title: 你好，世界
 categories: 生活
 tags: 随感 Life

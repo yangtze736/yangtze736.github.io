@@ -1,5 +1,6 @@
 ---
 layout: post
+author: yangtze736
 title: 每个人的金线
 category: 读书
 tags:

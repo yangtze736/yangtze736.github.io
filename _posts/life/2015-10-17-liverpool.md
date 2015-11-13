@@ -1,5 +1,6 @@
 ---
 layout: post
+author: yangtze736
 title: 克洛普首秀
 categories: 生活
 tags: 足球

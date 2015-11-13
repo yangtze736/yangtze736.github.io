@@ -1,5 +1,6 @@
 ---
 layout: post
+author: yangtze736
 title: 煎蛋吐司
 category: 生活
 tags: 

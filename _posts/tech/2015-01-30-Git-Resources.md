@@ -1,5 +1,6 @@
 ---
 layout: post
+author: yangtze736
 title: Git常用命令速查表
 category: 技术
 tags: Git Linux

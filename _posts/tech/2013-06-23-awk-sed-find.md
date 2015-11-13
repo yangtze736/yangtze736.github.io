@@ -1,5 +1,6 @@
 ---
 layout: post
+author: yangtze736
 title: Awk、Sed、Find工具的使用
 category: 技术
 tags: Linux

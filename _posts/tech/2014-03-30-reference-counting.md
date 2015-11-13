@@ -1,5 +1,6 @@
 ---
 layout: post
+author: yangtze736
 title: 引用计数
 category: 技术
 tags: CPlusPlus
