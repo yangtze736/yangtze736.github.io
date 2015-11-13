@@ -200,13 +200,9 @@ blockquote p:last-child {
 }
 
 img {
-  padding: 0;
-  border: 0;
-  /* display: block; */
-  /* margin: 0 0 1rem; */
-  /* margin: 0 */
-  /* border-radius: 5px; */
-  /* auto; */
+  margin: 0 0 1rem;
+  margin: 0
+  border-radius: 5px;
 }
 
 /* Tables */
