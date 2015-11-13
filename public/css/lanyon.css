@@ -251,7 +251,7 @@ tbody tr:nth-child(odd) th {
 
 
 .container {
-  max-width: 48rem;
+  max-width: 38rem;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
@@ -932,14 +932,14 @@ div.article a:focus {
 
 
 /**/
-@media (min-width: 48rem) {
+@media (min-width: 38rem) {
   .container {
-    max-width: 42rem;
+    max-width: 32rem;
   }
 }
-@media (min-width: 66rem) {
+@media (min-width: 56rem) {
   .container {
-    max-width: 48rem;
+    max-width: 38rem;
   }
 }
 
