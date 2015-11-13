@@ -17,4 +17,4 @@ kyll等知识，希望自己能够一直坚持下去吧。
 掐指一算我也好久没有出去玩了，该找个时间出去走走看看，和朋友聚一聚
 了。俗话说得好：有朋自远方来，尚能饭否？
 
-![Mou icon](http://yangtze736.github.io/public/img/food/5ec7217be86346aac5687973fe8dcdd4_r.jpg)
+![1](/public/img/food/5ec7217be86346aac5687973fe8dcdd4_r.jpg)
