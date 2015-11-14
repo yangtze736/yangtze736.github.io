@@ -200,9 +200,16 @@ blockquote p:last-child {
 }
 
 img {
-  display: block;
+  /*display: block;
   margin: 0 0 1rem;
-  border-radius: 5px;
+  border-radius: 5px;*/
+  border:0;
+  margin:0;
+  padding:0;
+  max-width:590px;
+  width:expression(this.width>590?"590px":this.width);
+  max-height:590px;
+  height:expression(this.height>590?"590px":this.height); 
 }
 
 /* Tables */
