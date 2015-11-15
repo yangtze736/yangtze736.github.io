@@ -1028,6 +1028,12 @@ div.article a:focus {
  * 为适应book样式所加
  */
 
+.jz-con{width:1000px;margin:0 auto;border:1px solid #ccc;padding:10px 0;}
+.jz-con:after{clear:both;display:block;width:0;height:0;content:""}
+.jz-pic{width:156px;height:200px;float:left;border:1px solid #ccc}
+.jz-pic img{width:156px;height:200px;}
+.jz-cent{float:left;width:700px;margin-left:90px;}
+
 /*
 .row {
 	margin-left: -15px;
