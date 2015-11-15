@@ -25,11 +25,13 @@
         </svg>
       </a>
 <h2 class="post-name"></h2>
+}
+}
 
 {% for book in page.books %}
   <div class="jz-con">
     <div class="jz-pic"><img src="{{ book.cover }}" alt="cover"></div>
-      <img src="{{ book.cover }}" alt="cover" style="width:156px;height:200px;">
+      <!-- <img src="{{ book.cover }}" alt="cover" style="width:156px;height:200px;"> -->
     <div class="jz-cent">
       <table border="1">
         <tr><td style="width="30%";">作者</td><td>{{ book.author }}</td></tr>
