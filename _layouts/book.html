@@ -25,27 +25,52 @@
         </svg>
       </a>
 <h2 class="post-name"></h2>
-
-{% for book in page.books %}
-  <div class="jz-con">
-    <div class="jz-pic"><img src="{{ book.cover }}" alt="cover"></div>
-      <!-- <img src="{{ book.cover }}" alt="cover" style="width:156px;height:200px;"> -->
-    <div class="jz-cent">
-      <table border="1">
-        <tr><td style="width=80px;">作者</td><td>{{ book.author }}</td></tr>
-        <tr><td>出版商</td><td>{{ book.publisher }}</td></tr>
-        <tr><td>语言</td><td>{{ book.language }}</td></tr>
-        <tr>
-          <td>链接</td><td>
-             <a href="{{ book.link }}" title="{{ book.link }}">图书链接</a>
-          </td>
-		</tr>
-        <tr><td>状态</td><td>{{ book.status }}</td></tr>
-        <tr><td>评论</td><td>{{ book.description }}</td></tr>
-      </table>
-    </div>
+<div class="post">
+  <div class="post-heading inside">
+    <img src="/public/img/{{ page.author }}.jpg">
+	<h1 class="post-title">
+	  <a class="post-title-blog" href="{{ post.url }}">
+		{{ page.title }}
+	  </a>
+	</h1>
+	  <p class="post-info">
+		{% if page.author == "yangtze736" %}
+		  <!-- {{ page.author }}原创 -->
+	    {% else %}
+          <!-- 转载{{ page.author }} -->
+	    {% endif %}
+	  </p>
+	  <span class="post-info"><i class="fa fa-calendar"></i>&nbsp{{ page.date | date: "%Y" }}/{{ page.date | date: "%m" }}/{{ page.date | date: "%d" }}  </span>
+	  <span class="post-info"><i class="fa fa-book"></i>&nbsp<a href="/category/index.html#{{ page.categories }}">{{ page.categories }}</a></span>
+	  <span class="post-info"><i class="fa fa-tags"></i>&nbsp<a href="/tag/index.html#{{ page.tags | first }}">{{ page.tags | first }}</a></span> 
+	  <span class="post-info">&nbsp<a href="/tag/index.html#{{ page.tags[1] }}">{{ page.tags[1] }}</a></span>
+	  <span class="post-info">&nbsp<a href="/tag/index.html#{{ page.tags[2] }}">{{ page.tags[2] }}</a></span>
   </div>
-{% endfor %}
+  <div class="post-content">
+    {% for book in page.books %}
+      <div class="jz-con">
+        <div class="jz-pic"><img src="{{ book.cover }}" alt="cover"></div>
+        <!-- <img src="{{ book.cover }}" alt="cover" style="width:156px;height:200px;"> -->
+        <div class="jz-cent">
+          <table border="1">
+            <tr><td style="width=80px;">作者</td><td>{{ book.author }}</td></tr>
+            <tr><td>出版商</td><td>{{ book.publisher }}</td></tr>
+            <tr><td>语言</td><td>{{ book.language }}</td></tr>
+            <tr>
+              <td>链接</td><td>
+                <a href="{{ book.link }}" title="{{ book.link }}">图书链接</a>
+              </td>
+		    </tr>
+            <tr><td>状态</td><td>{{ book.status }}</td></tr>
+            <tr><td>评论</td><td>{{ book.description }}</td></tr>
+          </table>
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+</div>
+
+
 
 <!-- <div class="related">
   <h2>Related Posts</h2>
