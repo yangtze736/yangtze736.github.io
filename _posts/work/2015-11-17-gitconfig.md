@@ -10,9 +10,9 @@ description:
 
 Git有一个工具被称为git config，它允许你获得和设置配置变量，用以控制Git的外观和操作的各个方面，这些变量可以被存储在三个不同的位置：
 
-1. /etc/gitconfig 文件
+**一** /etc/gitconfig 文件
 
-2. ~/.gitconfig 文件，这是我的GIT文件配置，如下：
+**二** ~/.gitconfig 文件，这是我的GIT文件配置，如下：
 
 {% highlight bash linenos %}
 
@@ -58,7 +58,7 @@ Git有一个工具被称为git config，它允许你获得和设置配置变量�
 {% endhighlight %}
 
 
-3. 位于git目录的config文件(也就是 .git/config)，这里稍微瞅瞅：
+**三** 位于git目录的config文件(也就是 .git/config)，这里稍微瞅瞅：
 
 {% highlight bash linenos %}
 
