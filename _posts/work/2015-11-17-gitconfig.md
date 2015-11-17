@@ -8,7 +8,11 @@ keywords:
 description:
 ---
 
-这是我的GIT文件配置，如下：
+Git有一个工具被称为git config，它允许你获得和设置配置变量，用以控制Git的外观和操作的各个方面，这些变量可以被存储在三个不同的位置：
+
+1. /etc/gitconfig 文件
+
+2. ~/.gitconfig 文件，这是我的GIT文件配置，如下：
 
 {% highlight bash linenos %}
 
@@ -51,5 +55,23 @@ description:
     rs = rebase --skiip
     ra = reabse --abort
 
+{% endhighlight %}
+
+
+3. 位于git目录的config文件(也就是 .git/config)，这里稍微瞅瞅：
+
+{% highlight bash linenos %}
+
+[core]
+    repositoryformatversion = 0 
+    filemode = true
+    bare = false
+    logallrefupdates = true
+[remote "origin"]
+    url = https://github.com/yangtze736/yangtze736.github.io
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
 
 {% endhighlight %}
