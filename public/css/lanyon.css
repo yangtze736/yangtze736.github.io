@@ -73,13 +73,13 @@ body {
 html {
   font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 22px;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 /*h1~h5 p strong */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans',"lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-weight: bold;
-  line-height: 1.5;
+  line-height: 1.3;
   color: #313131;
   letter-spacing: normal;/*字体间距*/
   word-spacing: normal;
@@ -105,7 +105,7 @@ h4, h5, h6 {
 
 p {
   font-size: 0.7rem;
-  line-height: 1.5;
+  line-height: 1.3;
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
@@ -167,7 +167,7 @@ pre {
   margin-bottom: 1rem;
   padding: 1rem;
   font-size: .6rem;
-  line-height: 1.4;
+  line-height: 1.2;
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
@@ -301,7 +301,7 @@ tbody tr:nth-child(odd) th {
   color: #ac4142;
   display: inline-block;
   font-size: 1.8rem;
-  line-height: 1.8rem;
+  line-height: 1.5rem;
   text-decoration: none;
   overflow: hidden;
   padding-right: 10px;
@@ -855,7 +855,7 @@ div.page-category {
 }
 .page-category a {
   font-size: .8rem;
-  line-height: 1.5rem;
+  line-height: 1.3rem;
   background-color: #eee;
   float: left;
   padding: .2rem 1rem;
@@ -898,7 +898,7 @@ div.page-tag {
 }
 .page-tag a {
   font-size: .6rem;
-  line-height: 1.5rem;
+  line-height: 1.3rem;
   background-color: #eee;
   float: left;
   padding: .1rem .6rem;
