@@ -36,6 +36,8 @@ Berkeley DB XML，是一个接口，通过它可以实现对XML数据存贮的�
 Berkeley DB只支持单一的数据结构，它的所有数据包括两个部分：key 和　data.
 Berkeley DB原则上是为嵌入式数据库设计的。
  
+<!-- more -->
+
 ###Berkeley DB的编译安装和使用
 ------------------------------
 

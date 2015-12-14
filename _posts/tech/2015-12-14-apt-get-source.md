@@ -1,7 +1,7 @@
 ---
 layout: post
 author: yangtze736
-title: 
+title: 如何获取Debian源码包
 category: 技术
 tags: Debian
 keywords: 
@@ -19,6 +19,8 @@ description:
 3、源码包中通常包含3个文件，分别以dsc，orig.tar.gz和diff.gz为后缀名。
 
  **sudo apt-get source  xxx**    命令来获取源码包，它会将源码包下载到用户当前目录
+
+<!-- more -->
 
 在命令执行过程中，调用dpkg-source命令，根据dsc文件中的信息，将源码包解压到同名目录中，应用程序的源代码就在这里面。
 
