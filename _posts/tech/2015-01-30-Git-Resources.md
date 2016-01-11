@@ -15,19 +15,23 @@ git操作，应该足以应对日常的工作需要。
 ###GIT配置
 使用Git的第一件事就是设置你的名字和email,这些就是你在提交commit时的签名。
 
-```
+{% highlight bash linenos %}
+
 $ git config --global user.name “your_name”
 $ git config --global user.email “your_name@company.com”
 $ git config --global color.ui true
 $ git config --global core.editor vi
-```
+
+{% endhighlight %}
 
 ###SSH-KEY
 
-```
+{% highlight bash linenos %}
+
 $ ssh-keygen -t rsa -C "your_email@youremail.com"
 $ cat ~/.ssh/id_rsa.pub
-```
+
+{% endhighlight %}
 
 将内容复制下来贴到Github帐号->Account Settings -> SSH Keys里
 这样在Github开专案，就可以push和pull下来了。
@@ -35,12 +39,14 @@ $ cat ~/.ssh/id_rsa.pub
 ###GIT ALIAS
 一些好用的git alias，让我想起了项目中之前使用过的CVS版本控制系统
 
-```
+{% highlight bash linenos %}
+
 $ git config --global alias.co checkout
 $ git config --global alias.ci commit
 $ git config --global alias.st status
 $ git config --global alias.br branch
-```
+
+{% endhighlight %}
 
 这样只要输入git st 就是git status 了,git 设定档的位置在~/.gitconfig，
 你也可以直接修改这个档案。
@@ -60,43 +66,54 @@ $ git config --global alias.br branch
 像其它文件一样加到项目仓库里(直接用git add .gitignore 和 git commit等命令),
 这样项目里的其它开发者也能共享同一套忽略文件规则。
 
+<!-- more -->
+
 ###标准工作流
 
-```
+{% highlight bash linenos %}
+
 $ vi test.cpp
 $ git add test.cpp
 $ git commit -m "commit info"
-```
+
+{% endhighlight %}
 
 ###撤销
 
-```
+{% highlight bash linenos %}
+
 $ git reset HEAD^              #留着修改在working tree
 $ git reset HEAD^ --soft       #修改放到staging area
 $ git reset HEAD^ --hard       #完全清除
-```
+
+{% endhighlight %}
 
 快速修正上一个commit（比如说之前的commit有typo），我们可以
 
-```
+{% highlight bash linenos %}
+
 $ git reset HEAD^
 edit files, modify typo and somethings.
 $ git commit -am"commit info"
-```
+
+{% endhighlight %}
 
 ###标签（TAG）
 
-```
+{% highlight bash linenos %}
+
 $ git tag PROJECT_NAME_20130513                    #轻量级标签
 $ git push origin PROJECT_NAME_20130513            #推到远端repo中
 $ git checkout  PROJECT_NAME_20130513              #貌似和分支间切换一样
 $ git tag -d PROJECT_NAME_20130513                 #删除本地tag
 $ git push origin :refs/tags/PROJECT_NAME_20130513 #删除远端tag
-```
+
+{% endhighlight %}
 
 ###分支操作
 
-```
+{% highlight bash linenos %}
+
 $ git branch                           #列出目前有哪些branch以及目前在那个branch
 $ git checkout <branch_name>           #切换到指定分支
 $ git branch <new_branch_name>         #建立本地local branch
@@ -106,25 +123,29 @@ $ git push origin :branch_name         #删除remote branch，注意origin和冒
 $ git checkout --track -b branch_20130415 origin/branch_20130415   #从远程仓库拉分支并立即切换到该分支
 $ git branch --set-upstream branch_20130210 origin/branch_20130210 #将一个已经存在的branch设定成tracking远端的branch
 $ git push origin local_branch_name: remote_branch_name            #将本地的分支push到remote
-```
+
+{% endhighlight %}
 
 ###合并与衍合
 
-```
+{% highlight bash linenos %}
+
 $ git merge <branch>           #合并指定分支到当前分支
 $ git rebase <branch>          #衍合指定分支到当前分支
-```
+
+{% endhighlight %}
 
 ###其他
 
-```
+{% highlight bash linenos %}
+
 $ git log -p          #列出不同提交之间的差异内容
 $ git log --stat      #显示每次提交中哪些文件被修改,分别添加或删除了多少行内容
 $ git log --pretty=format:'%h : %s' --topo-order --graph
-```
 
+{% endhighlight %}
 
-
+---
 
 ###资料链接
 1. [Git Book](http://git-scm.com/book/zh/v2)
