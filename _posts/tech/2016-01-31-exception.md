@@ -114,18 +114,12 @@ protected:
 
 void func(void)
 {
-  std::cout << "start func." << std::endl;
-
   if(true)
     throw TestException(DEFAULT_PROGRAM_NAME, __FUNCTION__, "an exception occurred!");
-
-  std::cout << "end of func." << std::endl;
 }
 
 int main(int argc, char *argv[])
 {
-  std::cout << "start main." << std::endl;
-
   try{
     func();
   }
@@ -137,7 +131,6 @@ int main(int argc, char *argv[])
     std::cout << "catch ..." << std::endl;
   }
 
-  std::cout << "end of main." << std::endl;
   return 0;
 }
 
