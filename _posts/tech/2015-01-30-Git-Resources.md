@@ -15,7 +15,7 @@ git操作，应该足以应对日常的工作需要。
 ###GIT配置
 使用Git的第一件事就是设置你的名字和email,这些就是你在提交commit时的签名。
 
-{% highlight bash linenos %}
+{% highlight c %}
 
 $ git config --global user.name “your_name”
 $ git config --global user.email “your_name@company.com”
@@ -26,7 +26,7 @@ $ git config --global core.editor vi
 
 ###SSH-KEY
 
-{% highlight bash linenos %}
+{% highlight c %}
 
 $ ssh-keygen -t rsa -C "your_email@youremail.com"
 $ cat ~/.ssh/id_rsa.pub
@@ -39,7 +39,7 @@ $ cat ~/.ssh/id_rsa.pub
 ###GIT ALIAS
 一些好用的git alias，让我想起了项目中之前使用过的CVS版本控制系统
 
-{% highlight bash linenos %}
+{% highlight c %}
 
 $ git config --global alias.co checkout
 $ git config --global alias.ci commit
@@ -70,7 +70,7 @@ $ git config --global alias.br branch
 
 ###标准工作流
 
-{% highlight bash linenos %}
+{% highlight c %}
 
 $ vi test.cpp
 $ git add test.cpp
@@ -80,7 +80,7 @@ $ git commit -m "commit info"
 
 ###撤销
 
-{% highlight bash linenos %}
+{% highlight c %}
 
 $ git reset HEAD^              #留着修改在working tree
 $ git reset HEAD^ --soft       #修改放到staging area
@@ -90,7 +90,7 @@ $ git reset HEAD^ --hard       #完全清除
 
 快速修正上一个commit（比如说之前的commit有typo），我们可以
 
-{% highlight bash linenos %}
+{% highlight c %}
 
 $ git reset HEAD^
 edit files, modify typo and somethings.
@@ -100,7 +100,7 @@ $ git commit -am"commit info"
 
 ###标签（TAG）
 
-{% highlight bash linenos %}
+{% highlight c %}
 
 $ git tag PROJECT_NAME_20130513                    #轻量级标签
 $ git push origin PROJECT_NAME_20130513            #推到远端repo中
@@ -112,7 +112,7 @@ $ git push origin :refs/tags/PROJECT_NAME_20130513 #删除远端tag
 
 ###分支操作
 
-{% highlight bash linenos %}
+{% highlight c %}
 
 $ git branch                           #列出目前有哪些branch以及目前在那个branch
 $ git checkout <branch_name>           #切换到指定分支
@@ -128,7 +128,7 @@ $ git push origin local_branch_name: remote_branch_name            #将本地的
 
 ###合并与衍合
 
-{% highlight bash linenos %}
+{% highlight c %}
 
 $ git merge <branch>           #合并指定分支到当前分支
 $ git rebase <branch>          #衍合指定分支到当前分支
@@ -137,7 +137,7 @@ $ git rebase <branch>          #衍合指定分支到当前分支
 
 ###其他
 
-{% highlight bash linenos %}
+{% highlight c %}
 
 $ git log -p          #列出不同提交之间的差异内容
 $ git log --stat      #显示每次提交中哪些文件被修改,分别添加或删除了多少行内容

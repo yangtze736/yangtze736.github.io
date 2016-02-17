@@ -14,7 +14,7 @@ Git有一个工具被称为git config，它允许你获得和设置配置变量�
 
 **二** ~/.gitconfig 文件，这是我的GIT文件配置，如下：
 
-{% highlight bash linenos %}
+{% highlight c %}
 
 [user]
     email = jiangzheahu@126.com
@@ -60,7 +60,7 @@ Git有一个工具被称为git config，它允许你获得和设置配置变量�
 
 **三** 位于git目录的config文件(也就是 .git/config)，这里稍微瞅瞅：
 
-{% highlight bash linenos %}
+{% highlight c %}
 
 [core]
     repositoryformatversion = 0 

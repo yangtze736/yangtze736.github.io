@@ -22,7 +22,7 @@ Git子模块功能允许你将一个Git仓库当作另外一个Git仓库的子�
 
 <!-- more -->
 
-{% highlight bash linenos %}
+{% highlight c %}
 
 [submodule "git_submodule_test"]
 	path = git_submodule_test
