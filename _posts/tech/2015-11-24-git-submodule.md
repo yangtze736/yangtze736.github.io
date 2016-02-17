@@ -14,7 +14,7 @@ Git子模块功能允许你将一个Git仓库当作另外一个Git仓库的子�
 
 这里拿我的Winterfell工程做测试，来熟悉一下git submodule的操作
 
-###为当前工程添加子模块
+### 为当前工程添加子模块
 
 > git submodule add https://github.com/google/snappy git_submodule_test
 
@@ -39,7 +39,7 @@ Git子模块功能允许你将一个Git仓库当作另外一个Git仓库的子�
 > git submodule update --init --recursive
 
 
-###删除子模块
+### 删除子模块
 
 下班不写了，肚子好饿， 呵呵哒~
 

@@ -12,7 +12,7 @@ description:
 伴、送礼自用两相宜的VCS（版本控制系统），下文涵盖了一些基础的和较常用的
 git操作，应该足以应对日常的工作需要。
 
-###GIT配置
+### GIT配置
 使用Git的第一件事就是设置你的名字和email,这些就是你在提交commit时的签名。
 
 {% highlight c %}
@@ -24,7 +24,7 @@ $ git config --global core.editor vi
 
 {% endhighlight %}
 
-###SSH-KEY
+### SSH-KEY
 
 {% highlight c %}
 
@@ -36,7 +36,7 @@ $ cat ~/.ssh/id_rsa.pub
 将内容复制下来贴到Github帐号->Account Settings -> SSH Keys里
 这样在Github开专案，就可以push和pull下来了。
 
-###GIT ALIAS
+### GIT ALIAS
 一些好用的git alias，让我想起了项目中之前使用过的CVS版本控制系统
 
 {% highlight c %}
@@ -51,7 +51,7 @@ $ git config --global alias.br branch
 这样只要输入git st 就是git status 了,git 设定档的位置在~/.gitconfig，
 你也可以直接修改这个档案。
 
-###忽略某些文件
+### 忽略某些文件
 
 项目中经常会生成一些Git系统不需要追踪(track)的文件，典型的是在编译生成
 过程中产生的文件或是编程器生成的临时备份文件。当然，你不追踪(track)这些
@@ -68,7 +68,7 @@ $ git config --global alias.br branch
 
 <!-- more -->
 
-###标准工作流
+### 标准工作流
 
 {% highlight c %}
 
@@ -78,7 +78,7 @@ $ git commit -m "commit info"
 
 {% endhighlight %}
 
-###撤销
+### 撤销
 
 {% highlight c %}
 
@@ -98,7 +98,7 @@ $ git commit -am"commit info"
 
 {% endhighlight %}
 
-###标签（TAG）
+### 标签（TAG）
 
 {% highlight c %}
 
@@ -110,7 +110,7 @@ $ git push origin :refs/tags/PROJECT_NAME_20130513 #删除远端tag
 
 {% endhighlight %}
 
-###分支操作
+### 分支操作
 
 {% highlight c %}
 
@@ -126,7 +126,7 @@ $ git push origin local_branch_name: remote_branch_name            #将本地的
 
 {% endhighlight %}
 
-###合并与衍合
+### 合并与衍合
 
 {% highlight c %}
 
@@ -135,7 +135,7 @@ $ git rebase <branch>          #衍合指定分支到当前分支
 
 {% endhighlight %}
 
-###其他
+### 其他
 
 {% highlight c %}
 
@@ -147,7 +147,7 @@ $ git log --pretty=format:'%h : %s' --topo-order --graph
 
 ---
 
-###资料链接
+### 资料链接
 1. [Git Book](http://git-scm.com/book/zh/v2)
 2. [Git 简明指南](http://rogerdudler.github.io/git-guide/index.zh.html)
 

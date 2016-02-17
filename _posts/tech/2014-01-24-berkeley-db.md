@@ -8,7 +8,7 @@ keywords:
 description: 
 ---
 
-###Berkeley DB的简介
+### Berkeley DB的简介
 --------------------
 
 Berkeley DB（BDB）是一个高性能的嵌入式数据库编程库（引擎），它可以用来保存任意类型的键／值对 (Key/Value Pair)，而且可以为一个键保存多个数据。Berkeley DB可以支持数千的并发线程同时操作数据库，支持最大256TB的数据。
@@ -26,7 +26,7 @@ BDB提供诸如C语言，C++，Java，Perl，Python，Tcl等多种编程语言�
 2009年，SUN被Oracle收购，不知道MySQL会不会再次启用Berkeley DB。
 
 
-###Berkeley DB的特点
+### Berkeley DB的特点
 --------------------
 
 Berkeley DB可以轻松支持上千个线程同时访问数据库，支持多进程、事务等特性。Berkeley DB运行在大多数的操作系统中，例如大多数的UNIX系统， 和windows系统，以及实时操作系统。
@@ -38,7 +38,7 @@ Berkeley DB原则上是为嵌入式数据库设计的。
  
 <!-- more -->
 
-###Berkeley DB的编译安装和使用
+### Berkeley DB的编译安装和使用
 ------------------------------
 
 编译安装
