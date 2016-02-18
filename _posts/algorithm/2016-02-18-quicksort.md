@@ -18,25 +18,27 @@ description:
 
 在初始状态下，数字6在序列的第1位。我们的目标是将6挪到序列中间的某个位置，假设这个位置是k。现在就需要寻找这个k，并且以第k位为分界点，左边的数都小于等于6，右边的数都大于等于6。想一想，你有办法可以做到这点吗？
 
+<!-- more -->
+
 ### 排序算法显神威
 
 方法其实很简单：分别从初始序列“6  1  2  7  9  3  4  5  10  8”两端开始“探测”。先从右往左找一个小于6的数，再从左往右找一个大于6的数，然后交换他们。这里可以用两个变量i和j，分别指向序列最左边和最右边。我们为这两个变量起个好听的名字“哨兵i”和“哨兵j”。刚开始的时候让哨兵i指向序列的最左边（即i=1），指向数字6。让哨兵j指向序列的最右边（即=10），指向数字。
 
-![1](/public/img/algo/quicksort-1.png)
+![1](/public/img/algo/quicksort-1.jpg)
 
 首先哨兵j开始出动。因为此处设置的基准数是最左边的数，所以需要让哨兵j先出动，这一点非常重要（请自己想一想为什么）。哨兵j一步一步地向左挪动（即j--），直到找到一个小于6的数停下来。接下来哨兵i再一步一步向右挪动（即i++），直到找到一个数大于6的数停下来。最后哨兵j停在了数字5面前，哨兵i停在了数字7面前。
 
-![2](/public/img/algo/quicksort-2.png)
+![2](/public/img/algo/quicksort-2.jpg)
 
-![3](/public/img/algo/quicksort-3.png)
+![3](/public/img/algo/quicksort-3.jpg)
 
 现在交换哨兵i和哨兵j所指向的元素的值。交换之后的序列如下：
 
 > 6  1  2  5  9  3  4  7  10  8
 
-![4](/public/img/algo/quicksort-4.png)
+![4](/public/img/algo/quicksort-4.jpg)
 
-![5](/public/img/algo/quicksort-5.png)
+![5](/public/img/algo/quicksort-5.jpg)
 
 到此，第一次交换结束。接下来开始哨兵j继续向左挪动（再友情提醒，每次必须是哨兵j先出发）。他发现了4（比基准数6要小，满足要求）之后停了下来。哨兵i也继续向右挪动的，他发现了9（比基准数6要大，满足要求）之后停了下来。此时再次进行交换，交换之后的序列如下：
 
@@ -46,11 +48,11 @@ description:
 
 > 3  1  2  5  4  6  9  7  10  8
 
-![6](/public/img/algo/quicksort-6.png)
+![6](/public/img/algo/quicksort-6.jpg)
 
-![7](/public/img/algo/quicksort-7.png)
+![7](/public/img/algo/quicksort-7.jpg)
 
-![8](/public/img/algo/quicksort-8.png)
+![8](/public/img/algo/quicksort-8.jpg)
 
 到此第一轮“探测”真正结束。此时以基准数6为分界点，6左边的数都小于等于6，6右边的数都大于等于6。回顾一下刚才的过程，其实哨兵j的使命就是要找小于基准数的数，而哨兵i的使命就是要找大于基准数的数，直到i和j碰头为止。
 
@@ -72,7 +74,7 @@ OK，现在3已经归位。接下来需要处理3左边的序列“2 1”和右�
 
 到此，排序完全结束。细心的同学可能已经发现，快速排序的每一轮处理其实就是将这一轮的基准数归位，直到所有的数都归位为止，排序就结束了。下面上个霸气的图来描述下整个算法的处理过程。
 
-![9](/public/img/algo/quicksort-9.png)
+![9](/public/img/algo/quicksort-9.jpg)
 
 ### 复杂度
 
