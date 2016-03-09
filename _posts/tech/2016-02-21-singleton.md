@@ -8,8 +8,9 @@ keywords:
 description: 
 ---
 
-*我不想说话；直接上代码了 :( * 将Singleton类的构造函数定义为private，这样就不能实例化为一个对象（抽象类），用户访问唯一实例的方法只有通过getInstance()成员函数。
-**加入Garbo做为Singleton的内嵌类，程序运行结束时，系统会调用CSingleton的静态成员Garbo的析构函数，该析构函数会删除单例的唯一实例。**那么问题来了，如何写代码测试验证？我不知道啊 -。-
+将Singleton类的构造函数定义为private，这样就不能实例化为一个对象（抽象类），用户访问唯一实例的方法只有通过getInstance()成员函数。
+
+**加入Garbo做为Singleton的内嵌类，程序运行结束时，系统会调用Singleton的静态成员Garbo的析构函数，该析构函数会删除单例的唯一实例。**
 
 ```c
 /*
