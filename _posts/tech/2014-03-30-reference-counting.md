@@ -25,7 +25,7 @@ description:
 
 ### 2. STL库的string利用引用计数共享内存
 
-```
+```c
 #include <stdio.h>
 #include <string>
 
@@ -46,7 +46,6 @@ int main()
 	str2[2] = 'a';
 	printf("the address of str2 is: %x\n",str2.c_str());
 }
-
 ```
 
 结果如下：
