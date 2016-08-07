@@ -20,7 +20,5 @@ title: About
 
 ---
 
-#### 友链：
-[我的Github](https://github.com/yangtze736)
-[我的博客园](http://www.cnblogs.com/yangtze736-2013-3-6)
-[小Live](http://www.cnblogs.com/xiaolive)
+[**我的Github**](https://github.com/yangtze736)
+
