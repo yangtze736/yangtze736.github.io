@@ -20,5 +20,5 @@ title: About
 
 ---
 
-[**我的Github**](https://github.com/yangtze736)
+[我的Github](https://github.com/yangtze736)
 
