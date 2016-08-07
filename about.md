@@ -18,3 +18,9 @@ title: About
 ### 关于博客
 这是我用github、jekyll、markdown搭建起来的博客，内容不一定与技术相关，更多的只是为了记录。未来的日子里，希望在这里写下一些自己的思考和感悟，如果可以的话，创造一些美好的事物。
 
+---
+
+#### 友链：
+[我的Github](https://github.com/yangtze736)
+[我的博客园](http://www.cnblogs.com/yangtze736-2013-3-6)
+[小Live](http://www.cnblogs.com/xiaolive)
