@@ -1,7 +1,9 @@
-##this is my blog
+## this is my blog
+
 博客搭载在github上，地址:yangtze736.github.io
 
-##Usage
+## Usage
+
 如果觉得可以的话可以直接clone这个项目
 
 post
@@ -12,11 +14,12 @@ post
 * category
 * tag
 
+## Author
 
-##Author
 博客原作者:Mark Otto 
 
 博客修改:SooHu
 
-##License
-MIT 
+## License
+
+**MIT**
