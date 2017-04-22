@@ -1,4 +1,4 @@
-## this is my blog
+## This is my blog
 
 博客搭载在github上，地址:yangtze736.github.io
 
@@ -14,6 +14,16 @@ post
 * category
 * tag
 
+## Jekyll 本地预览
+
+- jekyll build
+
+当前文件夹中的内容将会生成到 ./_site 文件夹中。
+
+- jekyll serve
+
+一个开发服务器将会运行在 http://localhost:4000/
+
 ## Author
 
 博客原作者:Mark Otto 
@@ -22,4 +32,4 @@ post
 
 ## License
 
-**MIT**
+**MIT LICENSE**
