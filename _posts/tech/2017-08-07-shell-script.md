@@ -16,10 +16,10 @@ description:
 
 ```
 
+#!/bin/sh -
 # Description: 脚本框架示例，注意外部调用时return值
 # Author: jiangzhe
 
-#!/bin/sh -
 IFS='
     '
 UMASK=002
@@ -126,20 +126,6 @@ exit 0
 
 这些配置文件结构简单，所以shell脚本写的也很简单，手写了一份做备忘，脚本大致思路就这样了，没有做测试。脚本运行环境CentOS 6.5
 
-
-test.json文件参考：
-
-```
-｛
-   "server_virtual_ip" : "192.168.1.1",
-   "server_port" : 8080,
-   "conf_file_path" : "/etc/",
-   "conf_file_name" : "ser.conf",
-   "cluster_ip" : "",
-   "cluster_port" : 12800
- ｝
-```
-
 shell脚本参考:
 
 ```
@@ -184,4 +170,19 @@ function setConfig()
 
 setConfig $1
 
+```
+
+---
+
+test.json文件参考：
+
+```
+｛
+   "server_virtual_ip" : "192.168.1.1",
+   "server_port" : 8080,
+   "conf_file_path" : "/etc/",
+   "conf_file_name" : "ser.conf",
+   "cluster_ip" : "",
+   "cluster_port" : 12800
+ ｝
 ```
