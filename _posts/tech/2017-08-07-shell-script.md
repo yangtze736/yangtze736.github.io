@@ -10,7 +10,7 @@ description:
 
 ### 一个脚本骨架
 
-自己写了个脚本框架，以后实现的脚本就按照这个来扩充，除日志定位部分没实现，大致上可用。
+自己写了个脚本框架，实现的脚本就按照这个来扩充，实现了简单日志定位，大致上可用。
 
 脚本参考：
 
@@ -30,6 +30,13 @@ trap "cd $START_DIR" EXIT
 
 SUCCESS='[  \033[1;32mOK\033[0;39m  ]'
 FAILURE='[\033[1;31mFAILED\033[0;39m]'
+
+# 日志文件，推荐使用绝对路径
+LOG_FILE_PATH=$HOME
+LOG_FILE=$LOG_FILE_PATH/shell.log
+
+# 是否打印屏幕
+SHOW_CONSOLE=Y
 
 function usage()
 {
@@ -54,6 +61,15 @@ function version()
     echo ""
 }
 
+function log_info()
+{
+    if [ $# -lt 1 ]; then
+        return
+    fi
+    echo "$(date +"%F %T") [INFO] $*" >> $LOG_FILE
+    [ $SHOW_CONSOLE == Y ] && echo "$(date +"%F %T") [INFO] $*"
+}
+
 function do_kill()
 {
     ps -ef| grep $@ ｜awk '{print $2}'| xargs kill -KILL
@@ -64,13 +80,15 @@ function do_start()
     #ulimit -c unlimited -n 81920 -s 1024
     #./test &
     # TODO
-    echo -e "starting test:        $SUCCESS"
+    log_info "trying to starting test ..."
+    echo -e "starting test:        $SUCCESS"
 }
 
 function do_stop()
 {
     #do_kill test
     # TODO
+    log_info "trying to stopping test ..."
     echo -e "stopping test:        $SUCCESS"
 }
 
