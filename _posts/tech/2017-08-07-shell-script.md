@@ -25,6 +25,7 @@ IFS='
 UMASK=002
 umask $UMASK
 
+#set -o nounset
 set -o errtrace
 set -o errexit
 
