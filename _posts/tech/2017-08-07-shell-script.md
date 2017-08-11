@@ -10,7 +10,7 @@ description:
 
 ### 一个脚本骨架
 
-自己写了个脚本框架，实现的脚本就按照这个来扩充，实现了简单日志定位，大致上可用。
+自己写了个脚本框架，实现的脚本就按照这个来扩充，实现了简单日志定位和异常捕获，大致上可用。
 
 脚本参考：
 
@@ -25,7 +25,11 @@ IFS='
 UMASK=002
 umask $UMASK
 
+set -o errtrace
+set -o errexit
+
 START_DIR=`pwd`
+trap "traperror $LINENO ${FUNCNAME} $BASH_LINENO" ERR
 trap "cd $START_DIR" EXIT
 
 SUCCESS='[  \033[1;32mOK\033[0;39m  ]'
@@ -69,6 +73,24 @@ function log_info()
     echo "$(date +"%F %T") [INFO] $*" >> $LOG_FILE
     [ $SHOW_CONSOLE == Y ] && echo "$(date +"%F %T") [INFO] $*"
 }
+
+function traperror()
+{
+    local err=$?
+    local line=$1
+    [ "$2" != "" ] && local funcstack=$2
+    [ "$3" != "" ] && local linecallfunc=$3
+    log_info "<-----"
+    log_info "Error: line $line - command exit with status: $err"
+    if [ "funcstack" != "" ];then
+        log_info "   ... Error at function ${funcstack[0]}() "
+        if [ "$linecallfunc" != "" ];then
+            log_info "called at line $3"
+        fi
+        echo ""
+    fi
+    log_info "----->"
+｝
 
 function do_kill()
 {
