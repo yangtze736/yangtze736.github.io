@@ -10,9 +10,31 @@ description:
 
 ### 一个脚本骨架
 
-自己写了个脚本框架，实现的脚本就按照这个来扩充，实现了简单日志定位和异常捕获，大致上可用。
+自己写了个脚本框架，实现了简单日志定位和异常捕获，以下几点可增强脚本健壮性
 
-脚本参考：
+- set -o nounset 
+
+当你使用未初始化的变量时让bash自动退出
+
+- set -o errtrace 
+
+告诉bash一旦有任何语句出错则退出
+
+- command ; if [ "S?" -ne 0 ]; then ... fi
+
+使用$?判断上一句执行结果
+
+- command || echo "command failed"
+
+使用 ||
+
+- trap func ERR 
+
+使用trap捕获异常
+
+<!-- more -->
+
+脚本实现如下：
 
 ```
 
@@ -162,8 +184,6 @@ parseArgs $*
 exit 0
 
 ```
-
-<!-- more -->
 
 ### 修改Json配置脚本
 
