@@ -21,5 +21,3 @@ title: About
 ---
 
 [我的Github](https://github.com/yangtze736)
-
-[我的另一个博客](https://stark736.github.io)
