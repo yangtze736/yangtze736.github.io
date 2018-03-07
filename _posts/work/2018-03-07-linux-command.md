@@ -40,7 +40,7 @@ pstree命令以树状图显示进程间的关系（displaya tree of processes）
 
 `pstree -p 以树状图显示系统进程关系`
 
-`pstree -pa 以树状图显示进程PID为<pid>的进程以及子进程`
+`pstree -pa pid 以树状图显示进程PID为<pid>的进程以及子进程`
 
 ---
 
@@ -48,7 +48,8 @@ lsof(list open files)是一个列出当前系统打开文件的工具。在linux
 
 * losf常用指令
 
-```
+{% highlight c %}
+
 lsof <filename>    显示打开某个文件的进程
 lsof +D <DIR>      显示所有打开该目录的进程，注意，如果不想显示其子目录的进程，可以使用+d。
 lsof -u <username>   显示某个用户启动进程所打开的文件
@@ -56,11 +57,13 @@ lsof -u^<username>   显示除了某个用户外的其他所以用户的启动�
 lsof -i [4|6][@hostname|ip][:service|port]       显示打开某ip或者端口的进程 （可以和netstat 配合使用）, 4和6 用来区分ip 协议
 lsof -i    列出所有的网络连接（注意，网络连接也是文件）
 lsof -i TCP:1-1024   列出所有使用TCP 协议，端口范围是1-1024 的网络连接
-```
+
+{% endhighlight %}
 
 * lsof输出列表的含义
 
-```
+{% highlight c %}
+
 FD – Represents the file descriptor. Some of the values of FDs are
 
 cwd – Current Working Directory
@@ -75,7 +78,8 @@ DIR – Directory
 REG – Regular file
 CHR – Character special file.
 FIFO – First In First Out
-```
+
+{% endhighlight %}
 
 ---
 **参照链接**
