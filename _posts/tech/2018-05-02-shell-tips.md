@@ -28,7 +28,7 @@ function waiting()
     do
         for j in '\\' '|' '/' '-'
         do
-            printf "\t\t\t%c%c%c%c%c test waiting %c%c%c%c%c\r" \
+            printf "\t\t\t\t%c%c%c%c%c test waiting %c%c%c%c%c\r" \
             "$j" "$j" "$j" "$j" "$j" "$j" "$j" "$j" "$j" "$j"
             sleep 0.1
         done
@@ -53,7 +53,7 @@ do
     printf "[%-100s] %d %c\r" "$str" "$i" "${arry[$index]}"
     sleep 0.1
     let i=i+1
-    let str+="#"
+    str+="#"
 done
 echo ""
 ```
@@ -82,7 +82,7 @@ do
         let bg=32
     fi
     printf "\033[${color};${bg}m%-s\033[0m %d %c\r" "$str" "$i" "${arry[$index]}"
-    uslepp 30000
+    usleep 30000
     let i=i+1
     str+="#"
 done
