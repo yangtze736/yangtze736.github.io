@@ -20,7 +20,7 @@ description:
 
 ### 二、转圈效果
 
-```shell
+```
 function waiting()
 {
     i=0
@@ -40,9 +40,9 @@ waiting
 
 ### 三、进度条效果
 
-1. 通过符号#填充[ ]完成进度
+1.  通过符号#填充[ ]完成进度
 
-```shell
+```
 #!/bin/bash
 i=0
 str=""
@@ -58,9 +58,9 @@ done
 echo ""
 ```
 
-2. 每个阶段有不同颜色区分进度
+2.  每个阶段有不同颜色区分进度
 
-```shell 
+```
 #!/bin/bash
 i=0
 str=""
@@ -85,6 +85,30 @@ do
     usleep 30000
     let i=i+1
     str+="#"
+done
+echo ""
+```
+
+3. 按照百分比显示进度
+
+*printf %3d*为显示百分比预留了3位，循环条件i每次递增5主要是为了减少进度条显示的长度
+
+*i每次递增5，取模之后的index值还是依次循环，保证了转圈圈的方向和频率*
+
+改用其他数字，转圈的显示效果没有add=4n+1时的好
+
+```
+#!/bin/bash
+i=0
+str=""
+array=("|" "/" "-" "\\")
+while [ $i -le 100 ]
+do
+    let index=i%4
+    printf "%3d%% %c%-20s%c\r" "$i" "${arry[$index]}" "$str" "${arry[$index]}"
+    sleep 0.2
+    let i=i+5
+    str+="*"
 done
 echo ""
 ```
