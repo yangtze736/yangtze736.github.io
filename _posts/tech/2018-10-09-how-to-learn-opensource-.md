@@ -8,7 +8,7 @@ keywords:
 description: 
 ---
 
-**这一篇整理本来是为组内分享准备的（十分钟分享），后来换了一个话题来说，这部分内容就一直放在了MRU文件，重新梳理出来**
+这一篇整理本来是为组内分享准备的（十分钟分享），后来换了一个话题来说，这部分内容就一直放在了MRU文件，重新梳理出来
 
 ### 写代码 VS 读代码
 
@@ -17,6 +17,7 @@ description:
 ### github上值得关注的公司和个人
 
 Facebook google alibaba tencent douban qiniu etc
+
 云风 陈皓 陶叔度 庄晓丹 司徒正美 etc
 
 ### 整理认识开源项目 
