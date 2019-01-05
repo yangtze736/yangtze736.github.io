@@ -3,6 +3,7 @@ layout: page
 title: About
 ---
 
+![1](/public/img/bali.jpg)
 
 ### 关于我
 网名：艾莉亚的猫,
