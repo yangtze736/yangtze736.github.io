@@ -21,6 +21,7 @@ $ git config --global user.name “your_name”
 $ git config --global user.email “your_name@company.com”
 $ git config --global color.ui true
 $ git config --global core.editor vi
+$ git config --global commit.template ~/.git-commit-template.txt
 
 {% endhighlight %}
 
@@ -122,7 +123,7 @@ $ git branch -d <branch_name>          #删除local branch
 $ git push origin :branch_name         #删除remote branch，注意origin和冒号间有空格
 $ git checkout --track -b branch_20130415 origin/branch_20130415   #从远程仓库拉分支并立即切换到该分支
 $ git branch --set-upstream branch_20130210 origin/branch_20130210 #将一个已经存在的branch设定成tracking远端的branch
-$ git push origin local_branch_name: remote_branch_name            #将本地的分支push到remote
+$ git push origin local_branch_name:remote_branch_name            #将本地的分支push到remote
 
 {% endhighlight %}
 
