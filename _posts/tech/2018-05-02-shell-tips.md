@@ -20,7 +20,7 @@ description:
 
 ### 二、转圈效果
 
-```
+``` shell
 #!/bin/bash
 function waiting()
 {
@@ -43,7 +43,7 @@ waiting
 
 - 通过符号#填充[ ]完成进度
 
-```
+``` shell
 #!/bin/bash
 i=0
 str=""
@@ -61,7 +61,7 @@ echo ""
 
 - 每个阶段有不同颜色区分进度
 
-```
+``` shell
 #!/bin/bash
 i=0
 str=""
@@ -98,7 +98,7 @@ echo ""
 
 改用其他数字，转圈的显示效果没有add=4n+1时的好
 
-```
+``` shell
 #!/bin/bash
 i=0
 str=""
@@ -128,7 +128,7 @@ y;xH设置光标位置，${total_stdy};0H设置光标在终端的左下角
 
 设置两个不同颜色的宽度区域，用来显示进度变化，参数赋值空字符串
 
-```
+``` shell
 #!/bin/bash
 
 total_stdy="$(($(stty size|cut -d' ' -f1)))"
