@@ -1,4 +1,14 @@
-状态迁移表（State Transition Table）
+---
+layout: post
+author: yangtze736
+title: 状态迁移表
+category: 工作
+tags: Linux
+keywords:
+description:
+---
+
+
 
 ```
 public enum OrderStatus {
