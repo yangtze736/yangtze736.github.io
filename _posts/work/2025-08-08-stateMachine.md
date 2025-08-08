@@ -10,7 +10,7 @@ description:
 
 
 
-```
+
 public enum OrderStatus {
     CREATED, // 订单创建
     UNPAID, // 订单待支付
@@ -76,7 +76,7 @@ public class OrderStateMachine {
         return nextStatus;
     }
 }
-```
+
 
 假设我们有一个订单 order，它的状态为 ORDER_CREATED，接下来我们需要将它流转到 ORDER_PAID 状态，那么可以按照以下流程：
 
@@ -85,7 +85,7 @@ public class OrderStateMachine {
 进入支付流程，等待用户支付
 用户支付成功后，将订单状态设置为 ORDER_PAID，并且更新订单的 update_time，同时添加一条状态变更记录到订单状态表中，记录的事件为 ORDER_PAID，表示订单已支付
 
-```
+
 if (order.getOrderStatus() == OrderStatus.ORDER_CREATED) {
     order.setOrderStatus(OrderStatus.ORDER_TO_BE_PAID);
     order.setUpdateTime(new Date());
@@ -100,6 +100,6 @@ if (order.getOrderStatus() == OrderStatus.ORDER_CREATED) {
 }
 
 
-```
+
 
 [原文](https://www.cnblogs.com/huaizuo/p/17239107.html)
